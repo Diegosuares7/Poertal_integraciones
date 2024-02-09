@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "rules": {
+    "react/prop-types": "off",
+    "react/jsx-uses-react": "error",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "format": ["UPPER_CASE", "camelCase", "PascalCase"]
+      },
+      {
+        "selector": ["function"],
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": ["classMethod", "classProperty", "parameter"],
+        "format": ["camelCase"]
+      },
+      {
+        "selector": ["class", "interface"],
+        "format": ["PascalCase"]
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
